@@ -1,5 +1,6 @@
 import { Grid, Typography } from '@mui/material';
 import { WooviLogo } from '../../components/WooviLogo';
+import { PaymentsOptionsCards } from '../../components/PaymentsOptionsCards';
 
 function PaymentMethods() {
   return (
@@ -7,10 +8,15 @@ function PaymentMethods() {
       <Grid item xs={12}>
         <WooviLogo />
       </Grid>
+
       <Grid item xs={12}>
         <Typography variant="body1" fontWeight={700}>
           João, como você quer pagar?
         </Typography>
+      </Grid>
+
+      <Grid item xs={12}>
+        <PaymentsOptionsCards chipLabel="Pix" />
       </Grid>
     </Grid>
   );

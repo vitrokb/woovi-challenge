@@ -5,7 +5,7 @@ import './WoovitLogo.css';
 function WooviLogo() {
   return (
     <Link to="/payment-methods">
-      <img className="logo" src={WooviLogoSvg} alt="Woovi Logo" />;
+      <img className="logo" src={WooviLogoSvg} alt="Woovi Logo" />
     </Link>
   );
 }
