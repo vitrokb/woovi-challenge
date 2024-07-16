@@ -1,11 +1,14 @@
 import { Card, CardContent, Typography, Chip } from '@mui/material';
+import { PaymentsOptionsCardTip } from '../PaymentsOptionsCardTip';
+import { BoldSpan } from '../BoldSpan';
 
 interface PaymentsOptionsCardsType {
   chipLabel: string;
   cashback?: boolean;
+  tip?: React.ReactNode;
 }
 
-function PaymentsOptionsCards({ chipLabel, cashback }: PaymentsOptionsCardsType) {
+function PaymentsOptionsCards({ chipLabel, cashback, tip }: PaymentsOptionsCardsType) {
   return (
     <>
       <div style={{ position: 'relative', top: 0, right: 0, marginBottom: 5 }}>
@@ -29,7 +32,7 @@ function PaymentsOptionsCards({ chipLabel, cashback }: PaymentsOptionsCardsType)
       <Card variant="outlined">
         <CardContent>
           <Typography variant="body1" component="div">
-            <span style={{ fontWeight: 700 }}>1x</span> R$ 30.500,00
+            <BoldSpan>1x</BoldSpan> R$ 30.500,00
           </Typography>
 
           {cashback ? (
@@ -37,6 +40,8 @@ function PaymentsOptionsCards({ chipLabel, cashback }: PaymentsOptionsCardsType)
               Ganhe 3% de Cashback
             </Typography>
           ) : null}
+
+          {tip ? <PaymentsOptionsCardTip>{tip}</PaymentsOptionsCardTip> : null}
         </CardContent>
       </Card>
     </>

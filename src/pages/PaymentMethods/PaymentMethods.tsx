@@ -1,6 +1,7 @@
 import { Grid, Typography } from '@mui/material';
 import { WooviLogo } from '../../components/WooviLogo';
 import { PaymentsOptionsCards } from '../../components/PaymentsOptionsCards';
+import { BoldSpan } from '../../components/BoldSpan';
 
 function PaymentMethods() {
   return (
@@ -16,7 +17,11 @@ function PaymentMethods() {
       </Grid>
 
       <Grid item xs={12}>
-        <PaymentsOptionsCards chipLabel="Pix" cashback />
+        <PaymentsOptionsCards
+          chipLabel="Pix"
+          cashback
+          tip={<>🤑{<BoldSpan> R$ 300 </BoldSpan>}de volta no seu Pix na hora</>}
+        />
       </Grid>
     </Grid>
   );
