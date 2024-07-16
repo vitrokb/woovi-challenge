@@ -16,7 +16,7 @@ function PaymentMethods() {
       </Grid>
 
       <Grid item xs={12}>
-        <PaymentsOptionsCards chipLabel="Pix" />
+        <PaymentsOptionsCards chipLabel="Pix" cashback />
       </Grid>
     </Grid>
   );
